@@ -1,0 +1,36 @@
+---
+abstract: 'create a module like TOSHIOITO does'
+author:
+  - 'Toshio Ito <toshioito@cpan.org>'
+build_requires:
+  Module::Build::Pluggable::CPANfile: 0.02
+  Test::More: 0
+configure_requires:
+  Module::Build: 0.42
+  Module::Build::Pluggable: 0.09
+  Module::Build::Pluggable::CPANfile: 0.02
+dynamic_config: 1
+generated_by: 'Module::Build version 0.42, CPAN::Meta::Converter version 2.132140'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Module-Starter-TOSHIOITO
+no_index:
+  directory:
+    - t
+    - xt
+    - eg
+    - inc
+  file:
+    - README.pod
+requires:
+  Carp: 0
+  ExtUtils::Command: 0
+  File::Spec: 0
+  Module::Starter::Simple: 0
+  perl: v5.10.0
+resources:
+  bugtracker: https://github.com/debug-ito/Module-Starter-TOSHIOITO/issues
+  repository: git://github.com/debug-ito/Module-Starter-TOSHIOITO.git
+version: 0.01
