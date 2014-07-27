@@ -7,7 +7,7 @@ use Carp;
 use File::Spec;
 use ExtUtils::Command qw(mkpath);
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 
 sub create_distro {
     my $either = shift;
@@ -57,9 +57,18 @@ my \$builder = Module::Build::Pluggable->new(
         file => ['README.pod'],
     },
     meta_add => {
+        'meta-spec' => {
+            version => 2,
+            url => 'https://metacpan.org/pod/CPAN::Meta::Spec',
+        },
         resources => {
-            bugtracker => 'https://github.com/$self->{github_user_name}/$reponame/issues',
-            repository => 'git://github.com/$self->{github_user_name}/$reponame.git',
+            bugtracker => {
+                web => 'https://github.com/$self->{github_user_name}/$reponame/issues',
+            },
+            repository => {
+                url => 'git://github.com/$self->{github_user_name}/$reponame.git',
+                web => 'https://github.com/$self->{github_user_name}/$reponame',
+            },
         }
     }
 );
@@ -82,6 +91,15 @@ on 'configure' => sub {
     requires 'Module::Build::Pluggable', '0.09';
     requires 'Module::Build::Pluggable::CPANfile', '0.02';
 };
+HERE
+    $self->_create_file_relative(".travis.yml", <<'HERE');
+language: perl
+perl:
+  - "5.10"
+  - "5.12"
+  - "5.14"
+  - "5.16"
+  - "5.18"
 HERE
     return $result;
 }
