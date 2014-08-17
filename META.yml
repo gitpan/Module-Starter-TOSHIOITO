@@ -20,8 +20,10 @@ no_index:
     - xt
     - eg
     - inc
+    - share
   file:
     - README.pod
+    - README.md
 requires:
   Carp: '0'
   ExtUtils::Command: '0'
@@ -33,4 +35,4 @@ requires:
 resources:
   bugtracker: https://github.com/debug-ito/Module-Starter-TOSHIOITO/issues
   repository: git://github.com/debug-ito/Module-Starter-TOSHIOITO.git
-version: '0.07'
+version: '0.08'

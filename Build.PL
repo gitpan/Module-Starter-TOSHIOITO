@@ -18,8 +18,8 @@ Module::Build->new(
     mb_prereqs_from_cpanfile(),
     
     no_index => {
-        directory => ["t", "xt", "eg", "inc"],
-        file => ['README.pod'],
+        directory => ["t", "xt", "eg", "inc", "share"],
+        file => ['README.pod', 'README.md'],
     },
     meta_add => {
         'meta-spec' => {

@@ -18,10 +18,12 @@
          "t",
          "xt",
          "eg",
-         "inc"
+         "inc",
+         "share"
       ],
       "file" : [
-         "README.pod"
+         "README.pod",
+         "README.md"
       ]
    },
    "prereqs" : {
@@ -58,5 +60,5 @@
          "web" : "https://github.com/debug-ito/Module-Starter-TOSHIOITO"
       }
    },
-   "version" : "0.07"
+   "version" : "0.08"
 }

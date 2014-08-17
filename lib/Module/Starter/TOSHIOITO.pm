@@ -7,7 +7,7 @@ use Carp;
 use File::Spec;
 use ExtUtils::Command qw(mkpath);
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 sub create_distro {
     my $either = shift;
@@ -57,8 +57,8 @@ Module::Build->new(
     mb_prereqs_from_cpanfile(),
     
     no_index => {
-        directory => ["t", "xt", "eg", "inc"],
-        file => ['README.pod'],
+        directory => ["t", "xt", "eg", "inc", "share"],
+        file => ['README.pod', 'README.md'],
     },
     meta_add => {
         'meta-spec' => {
