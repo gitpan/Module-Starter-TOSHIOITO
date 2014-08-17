@@ -33,4 +33,4 @@ requires:
 resources:
   bugtracker: https://github.com/debug-ito/Module-Starter-TOSHIOITO/issues
   repository: git://github.com/debug-ito/Module-Starter-TOSHIOITO.git
-version: '0.06'
+version: '0.07'
