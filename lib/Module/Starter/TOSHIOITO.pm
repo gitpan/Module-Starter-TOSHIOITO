@@ -7,7 +7,7 @@ use Carp;
 use File::Spec;
 use ExtUtils::Command qw(mkpath);
 
-our $VERSION = '0.08';
+our $VERSION = '0.09';
 
 sub create_distro {
     my $either = shift;
@@ -102,7 +102,7 @@ perl:
   - "5.16"
   - "5.18"
   - "5.20"
-before_install: "cpanm --quiet `cpanfile-dump --no-build --no-test --no-runtime`"
+before_install: "cpanm Module::Build::Prereqs::FromCPANfile"
 HERE
     return $result;
 }
